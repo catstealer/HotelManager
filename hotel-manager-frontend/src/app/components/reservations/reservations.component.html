@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card my-5 shadow main-card">
+    <div class="display-4 text-center pink mt-4 mb-5">Twoje rezerwacje</div>
+
+    <div *ngFor="let bill of arrayBill" class="container mb-4">
+
+      <div class="card shadow-sm rounded w-75 m-auto font-weight-light record">
+        <a routerLink="/reservation/{{bill.id}}">
+          <label class="font-weight-normal h5 mt-1 ml-2 mb-2">Rezerwacja</label>
+
+          <table class="table-sm table-borderless font-weight-light mb-3 ml-3">
+            <tbody>
+            <tr>
+              <td>Numer pokoju:</td>
+              <td class="font-weight-normal pink">
+                <div class="card shadow-sm rounded float-left px-1">
+                  {{bill.reservation.room.roomNumber}}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Poczatek rezerwacji:</td>
+              <td class="font-weight-normal pink">
+                {{bill.reservation.fromDate}}
+              </td>
+            </tr>
+            <tr>
+              <td>Koniec rezerwacji:</td>
+              <td class="font-weight-normal pink my-0">
+                {{bill.reservation.toDate}}
+              </td>
+            </tr>
+            <tr>
+              <td>Do zapłaty:</td>
+              <td class="font-weight-normal pink">
+                {{bill.price}}zł
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

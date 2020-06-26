@@ -1,0 +1,6 @@
+.page-footer {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 93%);
+  color: whitesmoke;
+  border-top: 2px solid whitesmoke;
+  position: relative;
+}

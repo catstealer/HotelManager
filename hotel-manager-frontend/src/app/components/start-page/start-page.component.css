@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "myFont";
+  src: url("/assets/fonts/Pacifico-Regular.ttf");
+}
+.bg-div {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  position: relative;
+}
+.content{
+  height: 90vh;
+}
+.cite-text{
+  font-size: 52px;
+  font-family: myFont;
+}
+blockquote{
+  background-color: rgba(238,174,202,0.9);
+  color: black;
+  border-radius: 20px;
+  padding: 3rem;
+  width: 50%;
+  text-align: center;
+}
+.btn-light {
+  background-color: rgb(238, 174, 202);
+  color: whitesmoke;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,25 @@
+.btn-pink{
+  background-color: rgb(238,174,202);
+}
+
+input.ng-invalid.ng-touched{
+  border: #dc3545 1px solid;
+}
+
+input.ng-valid.ng-touched{
+  border: #28a745 1px solid;
+}
+
+
+input.invalid.ng-touched{
+  border: #dc3545 1px solid;
+}
+
+.text-red{
+  color: #dc3545;
+}
+
+.h-min{
+  line-height: 24px;
+  height: 24px;
+}

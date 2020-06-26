@@ -1,0 +1,46 @@
+<div class="container">
+  <span class="d-block display-3 pb-3 border-bottom mt-5">Statystyki z ostatniego miesiąca</span>
+  <div class="row">
+    <div class="col-12 mt-5 mb-5">
+      <canvas baseChart
+              [datasets]="moneyStats"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+    <div class="col-12 mt-5 mb-5">
+      <canvas baseChart
+              [datasets]="countStats"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+    <div class="col-6 mt-5 mb-5">
+      <span class="d-inline-block display-4 mt-5 pb-3 mb-3 border-bottom">Łącznie:</span>
+      <table class="table-borderless jumbotron w-100 text-slightly-larger p-5">
+        <tr>
+          <td >
+            Liczba zatwierdzonych rachunków:
+          </td>
+          <td class="pink">
+            {{billsCount}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Wartość przychodu:
+          </td>
+          <td class="pink">
+            {{moneySum}} zł
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

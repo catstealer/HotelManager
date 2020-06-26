@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "myFont";
+  src: url("/assets/fonts/Pacifico-Regular.ttf");
+}
+
+.navbar{
+  color: whitesmoke;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 93%);
+  height: 10vh;
+  border-bottom: whitesmoke 2px solid;
+}
+
+.nav-list   li{
+  display: inline-block;
+  font-size: larger;
+  margin: 0 2.5vw;
+  padding: 0 2.5vw;
+  background-color: rgba(0,0,0,0);
+  transition: all ease-in-out 0.1s;
+}
+
+.nav-list li:hover{
+  background-color: rgba(255,255,255,0.1);
+  border-bottom: 2px solid whitesmoke;
+  cursor: pointer;
+}
+
+.activated{
+  border-bottom: 2px solid whitesmoke;
+}
+
+.nav-list{
+  display: block;
+  width: 80%;
+  margin: 2% auto 0 auto;
+  text-align: center;
+  padding: 0;
+  align-items: flex-end;
+}
+
+.nav-list > ul{
+  margin: 0;
+}
+
+.logo-icon{
+  position: absolute;
+  font-family: myFont;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.logo-icon:hover{
+  cursor: pointer;
+}
+
+.user-card{
+  position: absolute;
+  display: table-cell;
+  right: 0;
+  box-shadow: 0px 0px 41px -5px rgba(0,0,0,0.75);
+  margin-right: 2%;
+  padding: 0 1%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  background-color: rgba(0,0,0,0);
+  transition: background-color ease-in-out 0.1s;
+}
+.user-card:after {
+  display: block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 10px;
+}
+.user-card-icon:after {
+  content: "";
+  background: url("/assets/images/Ei-user.svg") no-repeat;
+}
+.text-konto{
+  margin-top: 10%;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.user-card:hover{
+  background-color: rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+.h-60{
+  height: 60%;
+}
+.stats-button{
+  position: fixed;
+  right: 5vh;
+  bottom: 5vh;
+}
+.btn-light {
+  background-color: rgb(238, 174, 202);
+  color: whitesmoke !important;
+}

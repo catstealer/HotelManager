@@ -1,0 +1,63 @@
+<div class="container mt-5">
+  <span class="display-3 pl-5">Pokój: {{room?.roomNumber || ' '}}</span>
+  <div class="row  p-5">
+    <div class="col-6">
+      <div>
+        <img class="img-thumbnail shadow-sm" src="/assets/images/room.jpg" alt="zdjęcie pokoju">
+      </div>
+    </div>
+    <div class="col-6 align-self-center text-center">
+      <div class="d-inline-block border ml-auto mr-auto text-left slightly-bigger-text shadow-sm">
+        <table class="table table-borderless float-left w-auto">
+          <tbody>
+          <tr>
+            <td>Obszar:</td>
+            <td>{{room?.area || ' '}}</td>
+          </tr>
+          <tr>
+            <td>Typ:</td>
+            <td>{{room?.roomTypeSet[0]?.name || ' '}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table class="table table-borderless float-left w-auto ml-3">
+          <tbody>
+          <tr>
+            <td>Cena za dzień:</td>
+            <td>{{room?.price || ' '}}</td>
+          </tr>
+          <tr>
+            <td>Ilość osób:</td>
+            <td>{{room?.personAmount || ' '}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+      <div class="pl-5 pr-5 mr-4 ml-4 mt-3 text-left">
+        <span class="display-5 bigger-text">Tagi: </span>
+        <div class="d-flex flex-wrap mt-2 p-2">
+          <div *ngFor="let tag of (room?.tagSet || [])" class="badge">
+            {{tag.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-top mt-5 p-5">
+    <span class="display-4">Opis:</span>
+    <p class="mt-3 text-justify">
+      {{room?.description || ' '}}
+    </p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="mr-3">
+      <span class="bigger-text d-block text-center mb-3">Wybierz date rezerwacji</span>
+      <app-reservation-date-picker [reservations]="roomReservations" (selectedDate)="dateSelect($event)" ></app-reservation-date-picker>
+      <button (click)="ngOnSubmit()" type="submit" class="form-control btn-light w-75 ml-auto mr-auto mt-4  text-larger">Stwóz rezerwacje
+        <fa-icon class="ml-4" [icon]="faPlus"></fa-icon>
+      </button>
+    </div>
+  </div>
+
+</div>

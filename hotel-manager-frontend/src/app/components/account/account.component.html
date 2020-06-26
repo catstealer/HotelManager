@@ -1,0 +1,59 @@
+<div class="container w-75 p-4 text-left mt-5">
+  <div class="w-75 mb-4"><span class="display-4">Dane podstawowe</span>
+    <hr>
+  </div>
+  <form (ngSubmit)="onSubmitLoginData()" [formGroup]="loginData" class="w-50 mb-5 ml-2 text-right">
+    <label for="password" class="float-left m-2">Hasło</label>
+    <input
+      id="password"
+      formControlName="password"
+      type="password"
+      class="form-control mt-3 mb-2">
+    <label for="repeat-password" class="float-left m-2">Powtórz hasło</label>
+    <input
+      id="repeat-password"
+      formControlName="repeatPassword"
+      type="password"
+      class="form-control mt-3 mb-2">
+    <span class="text-red d-block mt-4 h-min">  {{loginDataErr || ' '}}</span>
+    <button class="btn btn-light btn-pink text-white " [disabled]="!userData.valid"> Zapisz zmiany
+      <fa-icon [icon]="faLogin"></fa-icon>
+    </button>
+  </form>
+  <div class="w-75  mb-4"><span class="display-4">Dane osobiste</span>
+    <hr>
+  </div>
+  <form (ngSubmit)="onSubmitUserData()" [formGroup]="userData" class="w-50  mb-5  ml-2 text-right">
+    <label for="name" class="float-left m-2">Imię</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      class="form-control mt-3 mb-2">
+    <label for="last-name" class="float-left m-2">Nazwisko</label>
+    <input
+      id="last-name"
+      type="text"
+      formControlName="lastName"
+      class="form-control mt-3 mb-2">
+    <span class="text-red d-block mt-4 h-min">  {{loginDataErr || ' '}}</span>
+    <button class="btn btn-light btn-pink text-white" [disabled]="!userData.valid"> Zapisz zmiany
+      <fa-icon [icon]="faLogin"></fa-icon>
+    </button>
+  </form>
+  <div class="w-75  mb-4"><span class="display-4">Kontakt</span>
+    <hr>
+  </div>
+  <form (ngSubmit)="onSubmitContactForm()" [formGroup]="contactForm" class="w-50  mb-5  ml-2 text-right">
+    <label for="contact" class="float-left m-2">Kontakt</label>
+    <input
+      id="contact"
+      formControlName="contact"
+      class="form-control float-left  mb-2"
+      type="tel">
+    <span class="text-red d-block mt-4 h-min">  {{loginDataErr || ' '}}</span>
+    <button class="btn btn-light btn-pink text-white " [disabled]="!contactForm.valid"> Zapisz zmiany
+      <fa-icon [icon]="faLogin"></fa-icon>
+    </button>
+  </form>
+</div>

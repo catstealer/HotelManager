@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="jumbotron mt-2 text-center">
+    <h1 class="display-3">Wyników: {{roomAmount}}</h1>
+  </div>
+  <app-search (searchClicked)="onSearchSelected($event)"></app-search>
+  <app-room-list [roomList]="roomList"></app-room-list>
+  <app-page-navigation [maxNumber]="totalPagesAmount" (pageSelection)="onPageChanged($event)" [page]="pageNumber"></app-page-navigation>
+</div>

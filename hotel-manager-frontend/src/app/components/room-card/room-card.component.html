@@ -1,0 +1,27 @@
+<div class="container mt-2">
+  <div class="card shadow-sm rounded w-75 m-auto " [routerLink]="['/room', room.id]">
+    <div class="row">
+      <div class="col-5 p-0 overflow-hidden">
+        <img class="card-img float-left" src="assets/images/room.jpg" alt="Pokój">
+      </div>
+      <div class="col-7 p-3 pr-4 border-left">
+        <div class="h-50">{{room.description}}
+        </div>
+        <div class="row mt-2 h-50">
+          <div class="col-6">
+            <div class="mb-2 font-weight-bold"><label>Tag:
+              <span *ngFor="let tag of room.tagSet">{{tag.name}}</span>
+            </label></div>
+            <div class="font-weight-bold"><label>Liczba osób: {{room.personAmount}}</label></div>
+          </div>
+          <div class="col-6">
+            <div class="mb-2 font-weight-bold "><label>Typ:
+              <span *ngFor="let type of room.roomTypeSet">{{type.name}}</span>
+            </label></div>
+            <div class="font-weight-bold"><label>Cena za dzień: {{room.price}}</label></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

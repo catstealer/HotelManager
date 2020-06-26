@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hotel
+    username: postgres2
+    password: postgres2
+    platform: postgresql
+server:
+  port: 8001

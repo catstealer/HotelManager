@@ -1,0 +1,30 @@
+.room-card{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.main-card{
+  background-color: rgba(148, 187, 233, 0.1);
+}
+
+.pink{
+  color: #e83e8c;
+}
+
+.card-title{
+  color: #e83e8c;
+}
+
+.room-card-title{
+  color: #e83e8c;
+  font-size: 22px;
+}
+
+.reservation-details{
+  font-size: 20px;
+  width: 50%;
+}
+
+.room-card-details{
+  font-size: 16px;
+}

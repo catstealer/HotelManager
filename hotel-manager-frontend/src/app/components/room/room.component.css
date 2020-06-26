@@ -1,0 +1,18 @@
+.bigger-text{
+  font-size: 1.5rem;
+}
+.btn-light{
+  background-color: rgb(238,174,202);
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+.slightly-bigger-text{
+  font-size: 1.3rem;
+  background-color:  rgba(148,187,233,0.1);
+}
+
+.badge{
+  background-color: rgb(238, 174, 202);
+  font-size: 1rem;
+
+}

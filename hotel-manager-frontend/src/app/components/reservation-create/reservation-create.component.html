@@ -1,0 +1,33 @@
+<div class="container">
+  <ng-container *ngIf="room else warining">
+    <span class="d-block display-3 pb-2 mb-5 border-bottom mt-5">Zatwierdzenie rezerwacji</span>
+    <span class="d-inline-block ml-5 display-4 mb-5">Wybrany Pokój</span>
+    <app-room-card [room]="room" class="mt-5">
+    </app-room-card>
+    <span class="d-inline-block ml-5 mt-5 display-4">Dane rezerwacji</span>
+    <table class="table-borderless text-left mt-5 text-slightly-larger ml-5 w-50">
+      <tr>
+        <td>Początek rezerwacji:</td>
+        <td class="pink font-weight-bolder">{{formatDate(from)}}</td>
+      </tr>
+      <tr>
+        <td>Koniec rezerwacji:</td>
+        <td class="pink font-weight-bolder">{{formatDate(to)}}</td>
+      </tr>
+      <tr>
+        <td>Do zapłaty:</td>
+        <td class="pink font-weight-bolder">{{estimatePrice()}} zł</td>
+      </tr>
+    </table>
+    <div class="mt-5 mb-5">
+      <button (click)="ngOnSubmit()" type="submit" class="form-control btn-light w-25 m-auto text-larger">Zatwierdź rezerwacje
+      </button>
+    </div>
+  </ng-container>
+  <ng-template #warining>
+    <div class="text-center mt-5">
+      <img class="icon-size" src="/assets/images/warn.svg" alt="Warning"><br>
+      <span class="text-larger">Nie podano daty rezerwacji i pokoju!</span>
+    </div>
+  </ng-template>
+</div>

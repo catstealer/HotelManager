@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    initialization-mode: always
+
+  profiles:
+    active: prod
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  security:
+    user:
+      name: admin
+      password: admin
+

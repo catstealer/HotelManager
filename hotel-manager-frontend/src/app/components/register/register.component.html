@@ -1,0 +1,53 @@
+<div class="container w-50 p-4 text-center card shadow">
+  <span class="display-3">Zarejestruj się</span>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" >
+    <div class="row mt-5">
+      <div class="col-6 border-right">
+        <label for="email" class="float-left m-2">Email</label>
+        <input
+          id="email"
+          formControlName="email"
+          class="form-control mb-2">
+        <label for="password" class="float-left m-2">Hasło</label>
+        <input
+          id="password"
+          formControlName="password"
+          type="password"
+          class="form-control mt-3 mb-2">
+        <label for="repeat-password" class="float-left m-2">Powtórz hasło</label>
+        <input
+          id="repeat-password"
+          formControlName="repeatPassword"
+          type="password"
+          class="form-control mt-3 mb-2">
+        <label for="contact" class="float-left m-2">Podaj kontakt</label>
+        <input
+          id="contact"
+          formControlName="contact"
+          class="form-control float-left  mb-2"
+          type="tel">
+      </div>
+      <div class="col-6">
+        <label for="name" class="float-left m-2">Imię</label>
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          class="form-control mt-3 mb-2">
+        <label for="last-name" class="float-left m-2">Nazwisko</label>
+        <input
+          id="last-name"
+          type="text"
+          formControlName="lastName"
+          class="form-control mt-3 mb-2">
+        <span class="text-red d-block mt-4">  {{err || ' '}}</span>
+        <button class="btn btn-light btn-pink text-white"  [disabled]="!registerForm.valid"> Stwórz konto
+          <fa-icon [icon]="faLogin"></fa-icon>
+        </button>
+        <br>
+
+        <span>Masz konto <a routerLink="/login">zaloguj się</a></span>
+      </div>
+    </div>
+  </form>
+</div>

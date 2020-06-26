@@ -1,0 +1,33 @@
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+
+.custom-day.range, .custom-day:hover {
+  background-color: rgb(238, 174, 202);
+  color: white;
+}
+
+.custom-day.faded {
+  background-color: rgba(238, 174, 202, 0.5);
+}
+
+.btn-light {
+  background-color: rgb(238, 174, 202);
+  color: whitesmoke;
+}
+
+.text-larger {
+  font-size: larger;
+}
+
+.badge-dark {
+  background-color: rgb(238, 174, 202);
+}

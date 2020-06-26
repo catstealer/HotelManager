@@ -1,0 +1,14 @@
+.paralax{
+  background-image: url("/assets/images/hotel.jpg");
+  min-height: 30vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+agm-map{
+  height: 50vh;
+}
+.w-90{
+  width: 90%;
+}

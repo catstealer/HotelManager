@@ -1,0 +1,33 @@
+<div class="container h-100">
+  <div class="card shadow w-50 ml-auto mr-auto mt-auto mb-auto text-xl-center p-4">
+    <span class="display-3">Zaloguj się</span>
+    <form (ngSubmit)="onSubmit(formElement)" #formElement="ngForm">
+      <input
+        id="email"
+        name="email"
+        required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        ngModel
+        type="text"
+        class="form-control mt-5"
+        [class.invalid]="!isEmailValid">
+      <input
+        id="pass"
+        name="pass"
+        required
+        ngModel
+        minlength="6"
+        type="password"
+        class="form-control mt-3"
+        [class.invalid]="!isPasswordValid">
+
+      <div>
+        <span class="text-danger d-inline-block"> {{err}}</span> <br>
+        <button class="btn btn-light btn-pink mt-3 text-white">Zaloguj sie
+          <fa-icon [icon]="faLogin"></fa-icon>
+        </button>
+        <br>
+        <span>Nie masz konta <a routerLink="/register">zarejestruj się</a></span>
+      </div>
+    </form>
+  </div>
+</div>

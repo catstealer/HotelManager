@@ -1,0 +1,19 @@
+.icon-size{
+  width: 25%;
+}
+.text-larger{
+  font-size: 3rem;
+}
+.text-slightly-larger{
+  font-size: 1.2rem;
+}
+.pink{
+  color: #e83e8c;
+}
+.text-larger {
+  font-size: larger;
+}
+.btn-light {
+  background-color: rgb(238, 174, 202);
+  color: whitesmoke;
+}

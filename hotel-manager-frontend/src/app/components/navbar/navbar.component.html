@@ -1,0 +1,28 @@
+<div class="w-auto navbar">
+  <div class="logo-icon" (click)="onLogoCLick()" >Hotel Manager <img width="50px" height="50px" [src]="'/assets/images/holidays.png'"
+                                            alt="Logo hotelu"></div>
+  <ng-container *ngIf="userObservable | async else loginCard">
+    <div class="nav-list">
+      <ul>
+        <li routerLink="/home" routerLinkActive="active">Szukaj pokoju</li>
+        <li routerLink="/reservations" routerLinkActive="active">Rezerwacje</li>
+        <li routerLink="/contact" routerLinkActive="active">O nas/Kontakt</li>
+        <li (click)="logout()" routerLinkActive="active">Wyloguj się</li>
+      </ul>
+    </div>
+
+    <div class="user-card user-card-icon shadow" [routerLink]="['account', (userObservable | async).username]">
+      <span class="text-konto text-xl-center d-inline-block">Konto</span>
+    </div>
+  </ng-container>
+  <ng-template #loginCard>
+    <div class="user-card h-60 shadow" >
+      <span class="text-konto text-xl-center d-inline-block" routerLink="/login">Zaloguj się <fa-icon class="ml-2" [icon]="faUser"></fa-icon></span>
+    </div>
+  </ng-template>
+</div>
+<div class="stats-button" *ngIf="canAccess()">
+  <button type="button" class="btn btn-light form-control shadow" routerLink="/stats" >
+    Statystyki  <fa-icon [icon]="faStats"></fa-icon>
+  </button>
+</div>

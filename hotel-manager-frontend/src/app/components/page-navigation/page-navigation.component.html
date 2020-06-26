@@ -1,0 +1,13 @@
+<div class="row justify-content-center mt-4">
+  <nav *ngIf="this.numbers.length > 1">
+    <ul class="pagination">
+      <li class="page-item" (click)="prevPage()" [class.disabled]="0 === this.page"><a class="page-link">Poprzednia</a>
+      </li>
+      <li *ngFor="let number of numbers" class="page-item " [class.active]="this.page === number"><a class="page-link"
+                                                                                                    (click)="toPageNumber(number)">{{number + 1}}</a>
+      </li>
+      <li class="page-item"><a class="page-link" [class.disabled]="this.page === this.numbers.length -1"
+                               (click)="nextPage()">Następna</a></li>
+    </ul>
+  </nav>
+</div>

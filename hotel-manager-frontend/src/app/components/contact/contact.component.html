@@ -1,0 +1,30 @@
+<div class="paralax"></div>
+<div class="container">
+  <span class="d-block w-100 mt-2 mb-5 border-bottom text-center display-3 text-uppercase">
+    Info
+  </span>
+  <div class="row mb-5">
+    <div class="col-6 text-center">
+      <span class="text-uppercase font-weight-bold">Pensjonat Bekas</span><br>
+      <span>HOTEL</span><br><br>
+      <span class="font-weight-bold">NASZ ADRES</span><br>
+      <span>93-590 Łódź</span><br>
+      <span>Al. Politechniki 19A</span><br><br>
+      <span class="font-weight-bold">RECEPCJA</span><br>
+      <span>BEZPOŚREDNI KONTAKT</span><br>
+      <span class="font-weight-bold">42 684 63 70</span><br>
+      <span class="font-weight-bold">42 648 76 04</span><br>
+      <span class="font-weight-bold">recepcja@hotel-alicja.pl</span><br><br>
+      <img class="img-thumbnail" src="assets/images/kod.png" alt="Kod query">
+    </div>
+    <div class="col-6 align-middle border-left">
+      <div class="w-90 ml-auto mr-auto  ">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+          <agm-marker
+            [latitude]="lat" [longitude]="lng"
+          ></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>
